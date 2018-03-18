@@ -37,7 +37,8 @@ class Car:
             self.rides = rides
 
     def sort_rides(self):
-        self.rides.sort(key = lambda ride: ride.s)
+        #I've also used ride.ls and ride.s individually for sorting, giving different results in function of the input files
+        self.rides.sort(key = lambda ride: ride.ls + ride.s)
 
     def calculate_fitness(self):
         self.pos = [0,0]
